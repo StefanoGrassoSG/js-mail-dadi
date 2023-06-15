@@ -1,0 +1,39 @@
+/***************
+     RESET
+***************/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/***************
+    GENERAL
+***************/
+
+body {
+    background-color: black;
+}
+
+.container {
+    max-width: 1000px;
+    height: 100vh;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.square {
+    width: 300px;
+    height: 300px;
+}
+
+.square.red {
+    background-color: red;
+}
+
+.square.yellow {
+    background-color: yellow;
+}
