@@ -18,13 +18,20 @@ form.addEventListener('submit', function(evt){
     let input = document.getElementById("email").value;
     console.log(input)
 
-    if(mailList.indexOf(input) !== -1) {
-        alert("Hai effettutato l'accesso")
+    for(let i=0; i<mailList.length; i++) {
+
+        if (input == mailList[i]) {
+            alert ("hai effettuato l'accesso")
+            break;
+        }
+
+        else {
+            alert ("questa email non ha accesso")
+            break;
+        }
     }
-    
-    else {
-        alert("Questa email non ha accesso")
-    }
+
+     
         
 })
 
