@@ -12,13 +12,24 @@ const mailList = [
 ]
 
 for (let j = 0; j < mailList.length; j++) {
-    console.log(j, mailList[j]);
+   
+
+    form.addEventListener('submit', function(evt){
+        evt.preventDefault();
+        let input = document.getElementById("email").value;
+        console.log(input)
+
+        if (input == mailList[j]) {
+            alert("Hai effettutato l'accesso")
+        }
+    
+        else  {
+            alert("Questa email non ha accesso")
+        }
+        
+    })
+
     
 
 }
 
-form.addEventListener('submit', function(evt){
-    evt.preventDefault();
-    let input = document.getElementById("email").value;
-    console.log(input)
-})
