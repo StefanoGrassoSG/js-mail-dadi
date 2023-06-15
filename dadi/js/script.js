@@ -1,20 +1,35 @@
 //NUMBER GENERATOR
 
-const number = Math.floor(Math.random() * 6) + 1;
 
-const anotherNumber = Math.floor(Math.random() * 6) + 1;
+const button = document.getElementById('throw');
 
-document.querySelector('.red').append(number);
-document.querySelector('.yellow').append(anotherNumber);
+let result = document.querySelector('h1');
 
-if (number > anotherNumber) {
-    console.log("ROSSO hai vinto");
-}
+button.addEventListener('click', function(){
 
-else if (number == anotherNumber) {
-    console.log("PARI")
-}
+    const newNumber = document.getElementById('clear');
+    newNumber.innerHTML = '';
+    const newNumberSecond = document.getElementById('secondclear');
+    newNumberSecond.innerHTML = '';
 
-else {
-    console.log("YELLOW hai vinto")
-}
+    const number = Math.floor(Math.random() * 6) + 1;
+
+    const anotherNumber = Math.floor(Math.random() * 6) + 1;
+
+    document.querySelector('.red').append(number);
+   
+    document.querySelector('.yellow').append(anotherNumber);
+
+    if (number > anotherNumber) {
+        document.querySelector("h1").innerHTML = "ROSSO hai vinto!";
+    }
+
+    else if (number == anotherNumber) {
+        document.querySelector("h1").innerHTML = "PAREGGIO";
+    }
+
+    else {
+        document.querySelector("h1").innerHTML = "GIALLO hai vinto!";
+    }
+
+})

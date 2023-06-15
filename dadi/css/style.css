@@ -18,11 +18,11 @@ body {
 
 .container {
     max-width: 1000px;
-    height: 100vh;
     margin: auto;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    margin-top: 200px;
 }
 
 .square {
@@ -31,6 +31,7 @@ body {
     text-align: center;
     line-height: 300px;
     font-size: 75px;
+    border-radius: 10px;
 }
 
 .square.red {
@@ -47,4 +48,9 @@ body {
     font-weight: bold;
     background-color: white;
     border: 1px solid white;
+}
+
+h1 {
+    text-align: center;
+    color: white;
 }
